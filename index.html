@@ -63,8 +63,6 @@ h1 { font-size: 50px; margin: 0; }
   background: rgba(255,255,255,0.08);
   color: white;
   text-decoration: none;
-  border: none;
-  cursor: pointer;
 }
 
 .button:hover {
@@ -104,47 +102,7 @@ iframe {
   margin-top: 60px;
   color: #aaa;
 }
-
-/* SESSION BOX */
-.session-box {
-  background: rgba(0,0,0,0.4);
-  padding: 20px;
-  margin: 20px auto;
-  width: 300px;
-  border-radius: 15px;
-}
 </style>
-
-<script>
-function hostSession() {
-  let name = prompt("Enter your username:");
-  if(!name) return;
-
-  let session = {
-    host: name,
-    time: new Date().toLocaleString()
-  };
-
-  localStorage.setItem("haruSession", JSON.stringify(session));
-  loadSession();
-}
-
-function loadSession() {
-  let data = localStorage.getItem("haruSession");
-  if(data) {
-    let s = JSON.parse(data);
-    document.getElementById("sessionDisplay").innerHTML =
-      "<div class='session-box'>" +
-      "<b>TRAINING SESSION</b><br><br>" +
-      "Host: " + s.host + "<br>" +
-      "Time: " + s.time +
-      "</div>";
-  }
-}
-
-window.onload = loadSession;
-</script>
-
 </head>
 
 <body>
@@ -176,16 +134,10 @@ window.onload = loadSession;
 <a class="button" href="https://www.roblox.com/games/131888139540719/Har-Training-Center">📍 Training Center</a>
 <a class="button" href="https://www.roblox.com/games/107562026611243/P-tal-Kitchen">🍽 Main Kitchen</a>
 
-<!-- SESSIONS -->
-<div class="team-title">SESSIONS</div>
-
-<button class="button" onclick="hostSession()">🎓 Host Training</button>
-
-<div id="sessionDisplay"></div>
-
 <!-- TEAM -->
-<div class="team-title">High Executive Team & Development</div>
+<div class="team-title">Executive Officer/Team</div>
 <div class="team">
+
 <div class="member">
 <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-0795F2C234108FF18938A3C6662D9768-Png/512/512/AvatarHeadshot/Webp/noFilter">
 <p><b>Nexus</b></p>
@@ -215,9 +167,27 @@ window.onload = loadSession;
 <p><b>Camp</b></p>
 <p>Chairman</p>
 </div>
+
 </div>
 
-<!-- FOOTER -->
+<!-- FORMER HR -->
+<div class="team-title">Former HR</div>
+<div class="team">
+
+<div class="member">
+<img src="data:image/jpeg;base64,/9j/...">
+<p><b>itzmorriz1</b></p>
+<p>Former HR</p>
+</div>
+
+<div class="member">
+<img src="data:image/jpeg;base64,/9j/...">
+<p><b>iamsuperduperkooI</b></p>
+<p>Former HR</p>
+</div>
+
+</div>
+
 <div class="footer">Harú Team</div>
 
 </div>
